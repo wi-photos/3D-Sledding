@@ -1,0 +1,46 @@
+Penguin.tscn
+tux_texture.png.001.png
+	“Tux” by durmieu licensed CC-BY 3.0: https://opengameart.org/content/tux. The original work has been modified.
+wood.tscn
+Wood.png
+	“Wooden Log” by Anthony licensed CC-BY 3.0: https://opengameart.org/content/wooden-log.
+snow3.png
+snow2NormalMap.png
+	“Seamless snow texture” by erxer1 licensed CC-BY 3.0: https://opengameart.org/content/seamless-snow-texture. The original work has been modified.
+
+lvl1.tscn
+lvl1col.tscn
+lvl2.tscn
+lvl2col.tscn
+lvl2model.tscn
+lvl3.tscn
+lvl3col.tscn
+lvl4.tscn
+lvl4col.tscn
+lvl5.tscn
+lvl5col.tscn
+lvl6.tscn
+lvl6col.tscn
+lvl8.tscn
+lvl9.tscn
+lvl55.tscn
+lvl55col.tscn
+lvledges1.tscn
+lvlstart.tscn 
+frost.png
+frostNormalMap.png
+frostrough.png
+rock_diffuse.png
+rock1.tscn
+rocktest_normal.png
+sled.png
+sledDisplacementMap.png
+slick.tscn
+snow2d.png
+snowfall.tscn
+snowfall1.png
+snowfall2.png
+Tree.png
+tree1.tscn
+treeNormalMap.png 
+	CC0

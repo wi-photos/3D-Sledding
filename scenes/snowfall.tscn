@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/snowfall2.png" type="Texture" id=1]
+
+[sub_resource type="SpatialMaterial" id=1]
+flags_unshaded = true
+params_blend_mode = 1
+params_cull_mode = 2
+params_billboard_mode = 2
+albedo_texture = ExtResource( 1 )
+
+[sub_resource type="PlaneMesh" id=2]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="CPUParticles" type="CPUParticles" parent="."]
+transform = Transform( 30, 0, 0, 0, -1.31134e-06, -1, 0, 30, -4.37114e-08, 0, 0, 0 )
+material_override = SubResource( 1 )
+amount = 200
+lifetime = 11.24
+preprocess = 39.3
+mesh = SubResource( 2 )
+emission_shape = 2
+emission_box_extents = Vector3( 1, 1, 1 )
+spread = 3.87
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 11.76

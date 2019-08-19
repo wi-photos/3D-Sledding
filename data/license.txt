@@ -1,0 +1,16 @@
+Winter Snow.ogg
+	“Winter Feeling” by Tom Peter licensed CC-BY-SA 3.0: https://opengameart.org/content/winter-feeling. The original work has been modified.
+balloon.wav
+bg.png
+credits.ogg
+kenvector_future_thin.ttf
+menu.ogg
+new_dynamicfont.tres
+sky1.png
+titleicon.png
+transparentLight12.png
+transparentLight14.png
+transparentLight22.png
+transparentLight23.png
+wind.ogg 
+	CC0

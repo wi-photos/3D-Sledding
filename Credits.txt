@@ -1,0 +1,47 @@
+"3D Sledding" is developed by wi-photos © 2019.  
+
+Textures
+
+Verts https://wordpress.vertices.at
+
+erxer1 https://opengameart.org/users/erxer1
+
+Petr Kratochvil https://publicdomainpictures.net/en/browse-author.php?a=1
+
+“Seamless snow texture” by erxer1 licensed CC-BY 3.0: https://opengameart.org/content/seamless-snow-texture. The original work has been modified.
+
+3D Artwork
+
+Jeremy Mitchell https://opengameart.org/users/floatvoid
+
+Anthony https://opengameart.org/users/pantherone
+
+durmieu https://opengameart.org/users/durmieu
+
+Verts https://wordpress.vertices.at
+
+“Tux” by durmieu licensed CC-BY 3.0: https://opengameart.org/content/tux. The original work has been modified.
+
+“Wooden Log” by Anthony licensed CC-BY 3.0: https://opengameart.org/content/wooden-log
+
+Sound Effects
+
+Gniffelbaf http://www.oceancookies.nl
+
+Luke.RUSTLTD https://opengameart.org/users/lukerustltd
+
+Music
+
+Tom Peter https://soundcloud.com/tom-peter
+
+“Winter Feeling” by Tom Peter licensed CC-BY-SA 3.0: https://opengameart.org/content/winter-feeling. The original work has been modified.
+
+Font by Kenny.nl
+
+This game uses Godot Engine, available under the following license:
+Copyright (c) 2007-2019 Juan Linietsky, Ariel Manzur. Copyright (c) 2014-2019 Godot Engine contributors.
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Portions of this software are copyright © 2019 The FreeType Project (www.freetype.org). All rights reserved.

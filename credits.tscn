@@ -1,0 +1,98 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://data/new_dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://startButton.gd" type="Script" id=2]
+[ext_resource path="res://credits.gd" type="Script" id=3]
+[ext_resource path="res://data/credits.ogg" type="AudioStream" id=4]
+
+[sub_resource type="Gradient" id=1]
+colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://data/kenvector_future_thin.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 22
+font_data = SubResource( 3 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 390.43, 366.786 )
+scale = Vector2( 1, 1066.8 )
+texture = SubResource( 2 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 14.2583
+margin_top = 8.05167
+margin_right = 186.258
+margin_bottom = 71.0517
+custom_fonts/font = ExtResource( 1 )
+text = " Menu"
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 203.898
+margin_top = 179.485
+margin_right = 935.898
+margin_bottom = 4272.48
+custom_fonts/font = SubResource( 4 )
+text = "\"3D Sledding\" is developed by wi-photos © 2019.  
+
+Textures
+
+Verts https://wordpress.vertices.at
+
+erxer1 https://opengameart.org/users/erxer1
+
+Petr Kratochvil https://publicdomainpictures.net/en/browse-author.php?a=1
+
+“Seamless snow texture” by erxer1 licensed CC-BY 3.0: https://opengameart.org/content/seamless-snow-texture. The original work has been modified.
+
+3D Artwork
+
+Jeremy Mitchell https://opengameart.org/users/floatvoid
+
+Anthony https://opengameart.org/users/pantherone
+
+durmieu https://opengameart.org/users/durmieu
+
+Verts https://wordpress.vertices.at
+
+“Tux” by durmieu licensed CC-BY 3.0: https://opengameart.org/content/tux. The original work has been modified.
+
+“Wooden Log” by Anthony licensed CC-BY 3.0: https://opengameart.org/content/wooden-log
+
+Sound Effects
+
+Gniffelbaf http://www.oceancookies.nl
+
+Luke.RUSTLTD https://opengameart.org/users/lukerustltd
+
+Music
+
+Tom Peter https://soundcloud.com/tom-peter
+
+“Winter Feeling” by Tom Peter licensed CC-BY-SA 3.0: https://opengameart.org/content/winter-feeling. The original work has been modified.
+
+Font by Kenny.nl
+
+This game uses Godot Engine, available under the following license:
+Copyright (c) 2007-2019 Juan Linietsky, Ariel Manzur. Copyright (c) 2014-2019 Godot Engine contributors.
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Portions of this software are copyright © 2019 The FreeType Project (www.freetype.org). All rights reserved.
+"
+autowrap = true
+script = ExtResource( 3 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 428.11, 8.73694 )
+stream = ExtResource( 4 )
+autoplay = true
+[connection signal="pressed" from="Button" to="Button" method="_on_backtomenu_pressed"]

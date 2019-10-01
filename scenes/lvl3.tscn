@@ -29,7 +29,7 @@ shape = SubResource( 1 )
 [node name="Scene Root2" parent="." instance=ExtResource( 1 )]
 
 [node name="Rock" parent="." instance=ExtResource( 2 )]
-transform = Transform( 2.01, 0, 0, 0, 2.01, 0, 0, 0, 2.87376, -18.1014, 1.36945, 7.96676 )
+transform = Transform( 2.01, 0, 0, 0, 2.01, 0, 0, 0, 2.87376, -18.0758, 1.36945, 7.86271 )
 
 [node name="Rock2" parent="." instance=ExtResource( 2 )]
 transform = Transform( 2.01, 0, 0, 0, 2.01, 0, 0, 0, 2.87376, -18.1014, 1.36945, -8.01058 )

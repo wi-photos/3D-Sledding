@@ -14,8 +14,11 @@ var speeding = 0
 var score_file = "user://sledhighscore.txt"
 var highscore = 0
 var werover = 0
+var accum=0
 func _physics_process(delta):
 	set_process_input(true)
+	accum += delta
+	#print(accum)
 	werstarted = 1
 	var dir = Vector3() 
 	var cam_xform = $target/camera.get_global_transform()
@@ -95,12 +98,29 @@ func load_score():
 func save_score():
     var labelscore = get_node('/root/world/Label')
     var inthelabel = labelscore.get_text()
+    #print(inthelabel)
+    var timeDict = OS.get_time();
+    var dateDict= OS.get_date()
+    var hour = timeDict.hour;
+    var minute = timeDict.minute;
+    var seconds = timeDict.second;
+    #var thetime = OS.get_datetime()
+    var thedate = str(dateDict.year) + str(dateDict.month) + str(dateDict.day)  
+    var thetime = str(timeDict.hour) + str(timeDict.minute) + str(timeDict.second)
+    var datetimefinal = thedate + thetime
+    #print(accum)
+    var HTTPRequest = get_node('/root/world/HTTPRequest')
+    HTTPRequest.request("https://www.dreamlo.com/lb/(your super secret very long code)/add/Penguin" + datetimefinal + "/" + inthelabel + "/" + str(round(accum)))
+
     load_score()
     if highscore < int(inthelabel):
        var f = File.new()
        f.open(score_file, File.WRITE)
        f.store_string(str(inthelabel))
        f.close()
+func _on_HTTPRequest_request_completed( result, response_code, headers, body ):
+    var json = JSON.parse(body.get_string_from_utf8())
+    print(json.result)
 func _on_tcube_body_entered(body):
 	if body == self:
 		var themusic = get_node('/root/world/mainsong')

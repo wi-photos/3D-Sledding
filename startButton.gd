@@ -20,7 +20,8 @@ func _on_Button_pressed():
 
 func _on_credits_pressed():
 	get_tree().change_scene("res://credits.tscn")
-
+func _on_board_pressed():
+	get_tree().change_scene("res://leaderboard.tscn")
 
 
 func _on_settings_pressed():

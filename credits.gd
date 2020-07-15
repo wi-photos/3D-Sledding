@@ -2,7 +2,7 @@ extends Label
 
 func _ready():
 
-    pass # Replace with function body.
+	pass # Replace with function body.
 
 func _process(delta):
 	var t = Timer.new()

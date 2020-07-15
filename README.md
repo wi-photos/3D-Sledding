@@ -1,7 +1,6 @@
 # 3D-Sledding
 Get on Google Play https://play.google.com/store/apps/details?id=com.wiphotos.sledding.
 Full, open source, 3D sledding game made with Godot Engine 3.
-New in version 1.1, improved graphics and an all new leaderboard powered by dreamlo.com!
 ![Alt text](screenshots/screenshot.png?raw=true "Menu")
 ![Alt text](screenshots/screenshot1.png?raw=true "Gameplay Screenshot")
 ![Alt text](screenshots/screenshot2.png?raw=true "Gameplay Screenshot")

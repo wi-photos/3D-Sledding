@@ -5,6 +5,7 @@ bg.png
 credits.ogg
 kenvector_future_thin.ttf
 menu.ogg
+anthem.ogg
 new_dynamicfont.tres
 sky1.png
 titleicon.png

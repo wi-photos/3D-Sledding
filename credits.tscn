@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://data/new_dynamicfont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://startButton.gd" type="Script" id=2]
 [ext_resource path="res://credits.gd" type="Script" id=3]
 [ext_resource path="res://data/credits.ogg" type="AudioStream" id=4]
+[ext_resource path="res://data/wind.ogg" type="AudioStream" id=5]
 
 [sub_resource type="Gradient" id=1]
 colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 1 )
@@ -40,7 +41,7 @@ margin_top = 179.485
 margin_right = 935.898
 margin_bottom = 4272.48
 custom_fonts/font = SubResource( 4 )
-text = "\"3D Sledding\" is developed by wi-photos © 2019.  
+text = "\"3D Sledding\" is developed by wi-photos © 2020.  
 
 Textures
 
@@ -81,18 +82,25 @@ Tom Peter https://soundcloud.com/tom-peter
 Font by Kenny.nl
 
 This game uses Godot Engine, available under the following license:
-Copyright (c) 2007-2019 Juan Linietsky, Ariel Manzur. Copyright (c) 2014-2019 Godot Engine contributors.
+Copyright (c) 2007-2020  Juan Linietsky, Ariel Manzur. Copyright (c) 2014-2020 Godot Engine contributors.
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-Portions of this software are copyright © 2019 The FreeType Project (www.freetype.org). All rights reserved.
+Portions of this software are copyright © 2020 The FreeType Project (www.freetype.org). All rights reserved.
 "
 autowrap = true
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 428.11, 8.73694 )
 stream = ExtResource( 4 )
+autoplay = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AudioStreamPlayer2D"]
+stream = ExtResource( 5 )
 autoplay = true
 [connection signal="pressed" from="Button" to="Button" method="_on_backtomenu_pressed"]

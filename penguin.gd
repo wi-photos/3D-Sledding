@@ -89,38 +89,38 @@ func _on_tcube_body_enter(body):
 		print("hi")
 
 func load_score():
-    var f = File.new()
-    if f.file_exists(score_file):
-        f.open(score_file, File.READ)
-        var content = f.get_as_text()
-        highscore = int(content)
-        f.close()
+	var f = File.new()
+	if f.file_exists(score_file):
+		f.open(score_file, File.READ)
+		var content = f.get_as_text()
+		highscore = int(content)
+		f.close()
 func save_score():
-    var labelscore = get_node('/root/world/Label')
-    var inthelabel = labelscore.get_text()
-    #print(inthelabel)
-    var timeDict = OS.get_time();
-    var dateDict= OS.get_date()
-    var hour = timeDict.hour;
-    var minute = timeDict.minute;
-    var seconds = timeDict.second;
-    #var thetime = OS.get_datetime()
-    var thedate = str(dateDict.year) + str(dateDict.month) + str(dateDict.day)  
-    var thetime = str(timeDict.hour) + str(timeDict.minute) + str(timeDict.second)
-    var datetimefinal = thedate + thetime
-    #print(accum)
-    var HTTPRequest = get_node('/root/world/HTTPRequest')
-    HTTPRequest.request("https://www.dreamlo.com/lb/(your super secret very long code)/add/Penguin" + datetimefinal + "/" + inthelabel + "/" + str(round(accum)))
+	var labelscore = get_node('/root/world/Label')
+	var inthelabel = labelscore.get_text()
+	#print(inthelabel)
+	var timeDict = OS.get_time();
+	var dateDict= OS.get_date()
+	var hour = timeDict.hour;
+	var minute = timeDict.minute;
+	var seconds = timeDict.second;
+	#var thetime = OS.get_datetime()
+	var thedate = str(dateDict.year) + str(dateDict.month) + str(dateDict.day)  
+	var thetime = str(timeDict.hour) + str(timeDict.minute) + str(timeDict.second)
+	var datetimefinal = thedate + thetime
+	#print(accum)
+	var HTTPRequest = get_node('/root/world/HTTPRequest')
+	HTTPRequest.request("https://www.dreamlo.com/lb/(your super secret very long code)/add/Penguin" + datetimefinal + "/" + inthelabel + "/" + str(round(accum)))
 
-    load_score()
-    if highscore < int(inthelabel):
-       var f = File.new()
-       f.open(score_file, File.WRITE)
-       f.store_string(str(inthelabel))
-       f.close()
+	load_score()
+	if highscore < int(inthelabel):
+	   var f = File.new()
+	   f.open(score_file, File.WRITE)
+	   f.store_string(str(inthelabel))
+	   f.close()
 func _on_HTTPRequest_request_completed( result, response_code, headers, body ):
-    var json = JSON.parse(body.get_string_from_utf8())
-    print(json.result)
+	var json = JSON.parse(body.get_string_from_utf8())
+	print(json.result)
 func _on_tcube_body_entered(body):
 	if body == self:
 		var themusic = get_node('/root/world/mainsong')
@@ -151,23 +151,24 @@ func _on_tcube_body_entered(body):
 		
 func _on_speed_body_entered(body):
 	var MAX_SPEED1 = MAX_SPEED
-	speeding = 1
-	if MAX_SPEED1 > 35:
-		MAX_SPEED =65
-	if MAX_SPEED1 < 35:
-		MAX_SPEED = 45
-	if MAX_SPEED1 > 65:
-		MAX_SPEED = 95	
-	#print(MAX_SPEED)
-	var t = Timer.new()
-	t.set_wait_time(1)
-	t.set_one_shot(true)
-	self.add_child(t)
-	t.start()
-	yield(t, "timeout")
-	t.queue_free()
-	MAX_SPEED =MAX_SPEED1
-	speeding = 0
+	if speeding == 0:
+		speeding = 1
+		if MAX_SPEED1 > 35:
+			MAX_SPEED =95
+		if MAX_SPEED1 < 35:
+			MAX_SPEED = 65
+		if MAX_SPEED1 > 65:
+			MAX_SPEED = 125	
+		#print(MAX_SPEED)
+		var t = Timer.new()
+		t.set_wait_time(1)
+		t.set_one_shot(false)
+		self.add_child(t)
+		t.start()
+		yield(t, "timeout")
+		t.queue_free()
+		MAX_SPEED=MAX_SPEED1
+		speeding = 0
 	if werover == 1:
-    	MAX_SPEED =0
+		MAX_SPEED =0
 	#if werover == 0:

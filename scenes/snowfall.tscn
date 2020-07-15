@@ -22,6 +22,7 @@ preprocess = 39.3
 mesh = SubResource( 2 )
 emission_shape = 2
 emission_box_extents = Vector3( 1, 1, 1 )
+direction = Vector3( 0, 0, 0 )
 spread = 2.0
 gravity = Vector3( 0, 0, 0 )
 initial_velocity = 11.76
